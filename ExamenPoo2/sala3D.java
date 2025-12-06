@@ -8,9 +8,21 @@ public class sala3D extends Reserva {
         this.valorLentes = valorLentes;
     }
 
+    public double getvalorLentes(){
+        return valorLentes;
+    }
+
+
      @Override
    public String obtenerDetalles( ){
-    return " codigo " + getcodigo() + " nombre pelicula " + getnombrePelicula() + " costo base " + getcostoBase() + " valor lentes " +  valorLentes 
+        String resultado = super.obtenerDetalles();
+        resultado += " valor " + valorLentes;
+        return resultado;
+   }
+
+   @Override
+   public double calculaCostoTotal(){
+    return setcostoBase();
    }
 
 }

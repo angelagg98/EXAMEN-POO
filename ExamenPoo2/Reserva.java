@@ -6,20 +6,25 @@ public class Reserva {
     private String nombrePelicula;
     private double costoBase;
 
-    public Reserva (String coString,String nombrePelicula, double costoBase){
+    public Reserva (String codigo,String nombrePelicula, double costoBase){
         this.codigo = codigo;
         this.nombrePelicula = nombrePelicula;
         this.costoBase = costoBase; 
     }
 
+
+     public double calculaCostoTotal(){
+        return 0;
+    }
+
     public String obtenerDetalles(){
-        return " codigo " + codigo + " nombre Pelicula " + nombrePelicula + " costo Base " + costoBase;
+        String resultado = " codigo " + codigo + " nombre Pelicula " + nombrePelicula + " costo Base " + costoBase;
+        return resultado;
+    
     }
 
 
-
-
-
+   
 
 
 
@@ -46,8 +51,14 @@ public class Reserva {
     }
 
 
-    public void getcostoBase( double costoBase){
+    public double getcostoBase( double costoBase){
         this.costoBase = costoBase;
+    }
+
+
+    public double calcularCostoTotal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularCostoTotal'");
     }
 
 

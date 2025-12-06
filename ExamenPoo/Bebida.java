@@ -5,7 +5,7 @@ public class Bebida extends Menu {
     private int volumenMl;
     
 
-    public Bebida(int Id, String Nombre, doublere Precio, int volumenMl){
+    public Bebida(int Id, String Nombre, double Precio, int volumenMl){
           super(Id,Nombre,Precio);
              this.volumenMl = volumenMl;
     }

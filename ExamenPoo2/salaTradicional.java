@@ -9,11 +9,21 @@ public class salaTradicional extends Reserva {
         super(codigo,nombrePelicula,costoBase);
         this.duracionMin = duracionMin;
     }
+
+    public int getDuracionMin(){
+        return duracionMin;
+    }
     
      @Override
      public String obtenerDetalles(){
-     return " codigo " + getcodigo() + " nombre pelicula " + getnombrePelicula() + " costo base " + getcostoBase() +  " duracion en minutos " +  duracionMin;
-     
+        String resultado = super.obtenerDetalles();
+        resultado +=0 + duracionMin;
+        return resultado;
+   }
+
+   @Override
+   public double calculaCostoTotal(){
+    return setcostoBase();
    }
 
 }
